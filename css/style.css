@@ -1,38 +1,30 @@
-/* fraunces-900 - latin */
 @font-face {
   font-family: "Fraunces";
   font-style: normal;
   font-weight: 900;
   src: local(""), url("../fonts/fraunces-v24-latin-900.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/fraunces-v24-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/fraunces-v24-latin-900.woff") format("woff");
 }
-/* barlow-regular - latin */
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 400;
   src: local(""), url("../fonts/barlow-v12-latin-regular.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/barlow-v12-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/barlow-v12-latin-regular.woff") format("woff");
 }
-/* barlow-500 - latin */
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 500;
   src: local(""), url("../fonts/barlow-v12-latin-500.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/barlow-v12-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/barlow-v12-latin-500.woff") format("woff");
 }
-/* barlow-700 - latin */
 @font-face {
   font-family: "Barlow";
   font-style: normal;
   font-weight: 700;
   src: local(""), url("../fonts/barlow-v12-latin-700.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/barlow-v12-latin-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/barlow-v12-latin-700.woff") format("woff");
 }
 /* barlow-800 - latin */
 @font-face {
@@ -40,8 +32,7 @@
   font-style: normal;
   font-weight: 800;
   src: local(""), url("../fonts/barlow-v12-latin-800.woff2") format("woff2"),
-    /* Chrome 26+, Opera 23+, Firefox 39+ */
-      url("../fonts/barlow-v12-latin-800.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url("../fonts/barlow-v12-latin-800.woff") format("woff");
 }
 * {
   box-sizing: border-box;
@@ -150,12 +141,13 @@ a {
 /* collection-section */
 
 .collection-list {
-  position: relative;
   margin: 0 auto;
   padding-top: 126px;
   width: 1100px;
   display: flex;
   justify-content: space-between;
+  background-image: url("../img/our-collection-bg.png");
+  background-repeat: no-repeat;
 }
 .collection-item {
   width: 256px;
@@ -176,24 +168,6 @@ a {
   line-height: 26px;
   color: #333d4b;
   margin-top: 24px;
-}
-.collection-wrap {
-  position: absolute;
-  top: 85px;
-  z-index: -1;
-  font-family: "Fraunces", serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 150px;
-  line-height: 72px;
-  text-align: center;
-  color: #83888f;
-  background: linear-gradient(
-    180deg,
-    rgba(254, 252, 247, 0.0001) 0%,
-    #fefcf7 100%
-  );
-  opacity: 0.5;
 }
 /* why-section */
 .why-section {
@@ -282,31 +256,22 @@ a {
   margin-bottom: 95px;
 }
 .line {
-  position: relative;
   width: 760px;
   height: 2px;
   background-color: #fdd6ba;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .circle {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  display: block;
   width: 31px;
   height: 31px;
   background: #fefcf7;
   border: 2px solid #0e8784;
   border-radius: 50%;
 }
-.circle:nth-child(2) {
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.circle:nth-child(3) {
-  right: 0;
-}
+
 .work-list {
   width: 1045px;
   display: flex;
@@ -362,8 +327,8 @@ a {
   align-items: center;
   justify-content: space-between;
 }
-.logo path:hover {
-  color: red;
+.foot-logo-img:hover path {
+  fill: #fdd6ba;
 }
 
 /* About us page */
@@ -502,3 +467,129 @@ a {
   color: #333d4b;
   margin-top: 24px;
 }
+/* Create your plan  */
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list {
+  display: flex;
+}
+.list__item + .list__item {
+  margin-left: 33px;
+}
+.list__item__link {
+  font-family: "Barlow" sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.923077px;
+  text-transform: uppercase;
+  color: #83888f;
+}
+
+.list__item__link:hover {
+  color: #333d4b;
+}
+/* create__section */
+.create__section {
+  margin-bottom: 177px;
+}
+.hero {
+  border-radius: 20px;
+  padding: 134px 0 134px 85px;
+  background-image: url("../img/create-bg.png");
+  background-repeat: no-repeat;
+}
+.hero__content {
+  width: 485px;
+}
+.hero__title {
+  font-family: "Fraunces", serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 72px;
+  color: #fefcf7;
+}
+.hero__text {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fefcf7;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+  margin-top: 32px;
+}
+/* pick-section */
+
+.pick {
+  padding: 91px 0 107px 85px;
+  background-color: #2c343e;
+  border-radius: 10px;
+}
+.pick__wrapper {
+  margin-left: 16px;
+  position: relative;
+  width: 760px;
+  height: 2px;
+  background-color: #fdd6ba;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pick__circle {
+  position: absolute;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  border: 2px solid rgba(14, 135, 132, 1);
+}
+.pick__circle:nth-child(1) {
+  transform: translateX(-50%);
+}
+.pick__circle:nth-child(2) {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.pick__circle:nth-child(3) {
+  right: 0;
+  transform: translateX(50%);
+}
+.pick__list {
+  width: 1045px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 83px;
+}
+.pick__item {
+  width: 285px;
+}
+.pick__number {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 72px;
+  line-height: 72px;
+  color: #fdd6ba;
+}
+.pick__title {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+  color: #fefcf7;
+  margin-top: 38px;
+}
+.pick__text {
+  font-family: "Barlow";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fefcf7;
+  margin-top: 42px;
+}
+
